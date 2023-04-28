@@ -23,6 +23,14 @@ namespace BlDay6Problems{
                     return false;
             return true;
         }
+        private static int ReverseNumber(int n){
+            int rev=0;
+            while(n>0){
+                rev=(rev*10)+(n%10);
+                n/=10;
+            }
+            return rev;
+        }
         public static void Main(string[] args){
             int n;
             //Console.Write("Enter limit for fibonacci series: ");
@@ -31,9 +39,12 @@ namespace BlDay6Problems{
             //Console.Write("Enter a number: ");
             //n=Convert.ToInt32(Console.ReadLine());
             //Console.WriteLine("Is "+n+" a perfect number? "+PerfectNumber(n));
+            //Console.Write("Enter a number: ");
+            //n=Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Is "+n+" a prime number? "+PrimeNumber(n));
             Console.Write("Enter a number: ");
             n=Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Is "+n+" a prime number? "+PrimeNumber(n));
+            Console.WriteLine("Reversed Number of "+n+" is: "+ReverseNumber(n));
         }
     }
 }
