@@ -42,9 +42,22 @@ namespace BlDay6Problems{
             //Console.Write("Enter a number: ");
             //n=Convert.ToInt32(Console.ReadLine());
             //Console.WriteLine("Is "+n+" a prime number? "+PrimeNumber(n));
-            Console.Write("Enter a number: ");
+            //Console.Write("Enter a number: ");
+            //n=Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Reversed Number of "+n+" is: "+ReverseNumber(n));
+            Console.Write("Enter number of Distinct coupan numbers [upto 100000]: ");
             n=Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Reversed Number of "+n+" is: "+ReverseNumber(n));
+            bool [] Dist=new bool[100000];
+            for(int i=0;i<n;i++)
+                Dist[Convert.ToInt32(Console.ReadLine())]=true;
+            Random rnd=new Random();
+            int ans=0,r;
+            while(true){
+                r=rnd.Next(100000);
+                if(Dist[r]) break;
+                ans++;
+            }
+            Console.WriteLine(ans+" random number generated for new one");
         }
     }
 }
