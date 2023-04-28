@@ -10,11 +10,21 @@ namespace BlDay6Problems{
             }
             Console.WriteLine();
         }
+        private static bool PerfectNumber(int n){
+            int sm=1;
+            for(int i=2;i<=n/2;i++)
+                if(n%i==0)
+                    sm+=i;
+            return sm==n;
+        }
         public static void Main(string[] args){
             int n;
-            Console.Write("Enter limit for fibonacci series: ");
+            //Console.Write("Enter limit for fibonacci series: ");
+            //n=Convert.ToInt32(Console.ReadLine());
+            //Fib(--n);
+            Console.Write("Enter a number: ");
             n=Convert.ToInt32(Console.ReadLine());
-            Fib(--n);
+            Console.WriteLine("Is "+n+" a perfect number? "+PerfectNumber(n));
         }
     }
 }
