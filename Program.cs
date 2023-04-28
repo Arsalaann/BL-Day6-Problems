@@ -17,14 +17,23 @@ namespace BlDay6Problems{
                     sm+=i;
             return sm==n;
         }
+        private static bool PrimeNumber(int n){
+            for(int i=2;i<n;i++)
+                if(n%i==0)
+                    return false;
+            return true;
+        }
         public static void Main(string[] args){
             int n;
             //Console.Write("Enter limit for fibonacci series: ");
             //n=Convert.ToInt32(Console.ReadLine());
             //Fib(--n);
+            //Console.Write("Enter a number: ");
+            //n=Convert.ToInt32(Console.ReadLine());
+            //Console.WriteLine("Is "+n+" a perfect number? "+PerfectNumber(n));
             Console.Write("Enter a number: ");
             n=Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Is "+n+" a perfect number? "+PerfectNumber(n));
+            Console.WriteLine("Is "+n+" a prime number? "+PrimeNumber(n));
         }
     }
 }
