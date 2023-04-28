@@ -32,7 +32,7 @@ namespace BlDay6Problems{
             return rev;
         }
         public static void Main(string[] args){
-            int n;
+            //int n;
             //Console.Write("Enter limit for fibonacci series: ");
             //n=Convert.ToInt32(Console.ReadLine());
             //Fib(--n);
@@ -45,7 +45,7 @@ namespace BlDay6Problems{
             //Console.Write("Enter a number: ");
             //n=Convert.ToInt32(Console.ReadLine());
             //Console.WriteLine("Reversed Number of "+n+" is: "+ReverseNumber(n));
-            Console.Write("Enter number of Distinct coupan numbers [upto 100000]: ");
+            /*Console.Write("Enter number of Distinct coupan numbers [upto 100000]: ");
             n=Convert.ToInt32(Console.ReadLine());
             bool [] Dist=new bool[100000];
             for(int i=0;i<n;i++)
@@ -58,6 +58,16 @@ namespace BlDay6Problems{
                 ans++;
             }
             Console.WriteLine(ans+" random number generated for new one");
+            */
+            Console.Write("Enter start and end time[in 00:00:00 Format]: ");
+            string st,ed;
+            st=Console.ReadLine();
+            ed=Console.ReadLine();
+            Console.WriteLine(
+              Convert.ToInt16(ed.Substring(0,2))-Convert.ToInt16(st.Substring(0,2))+":"
+             +(Convert.ToInt16(ed.Substring(3,2))-Convert.ToInt16(st.Substring(3,2)))+":"
+             +(Convert.ToInt16(ed.Substring(6,2))-Convert.ToInt16(st.Substring(6,2)))
+            );
         }
     }
 }
